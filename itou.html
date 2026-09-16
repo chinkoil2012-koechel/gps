@@ -20,7 +20,9 @@ style="font-size:28px;padding:20px 40px;">
 function getGPS(){
 
 const building = "イトゥビル";
-const employee = "生田";
+const params = new URLSearchParams(window.location.search);
+const employee = params.get("employee");
+
 
 document.getElementById("result").innerHTML =
 "取得中...<br>" +
