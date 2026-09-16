@@ -6,7 +6,7 @@
 <title>GPSテスト</title>
 </head>
 <body style="font-size:20px;padding:20px;text-align:center;">
-<h2>イトゥビルGPSテスト</h2>
+<h2>イトゥビル GPSテスト</h2>
 
 <button onclick="getGPS()"
 style="font-size:28px;padding:20px 40px;">
@@ -20,9 +20,13 @@ style="font-size:28px;padding:20px 40px;">
 function getGPS(){
 
 const building = "イトゥビル";
+const employee = "生田";
 
 document.getElementById("result").innerHTML =
-"取得中...<br>" + building;
+"取得中...<br>" +
+building +
+"<br>" +
+employee;
 
 navigator.geolocation.getCurrentPosition(
 
