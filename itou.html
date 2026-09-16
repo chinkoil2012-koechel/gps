@@ -28,8 +28,17 @@ navigator.geolocation.getCurrentPosition(
 
 function(pos){
 
+document.getElementById("result").innerHTML =
+"位置情報取得完了<br><br>" +
+building +
+"<br><br>フォームを開いています...";
+
+setTimeout(function(){
+
 location.href =
 "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ldnlsQxkbke7nO1NX1N_hKgS1X07HpZJqyuN6UG34pxURFpZRDVMSE02UkI0NzVWSDRUREw3UDczQy4u";
+
+}, 1500);
 
 },
 
