@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GPSテスト</title>
+</head>
+<body>
+
+<h2>GPSテスト</h2>
+
+<button onclick="getGPS()">位置情報取得</button>
+
+<div id="result"></div>
+
+<script>
+
+function getGPS(){
+
+document.getElementById("result").innerHTML =
+"取得中...";
+
+navigator.geolocation.getCurrentPosition(
+
+function(pos){
+
+location.href =
+"https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ldnlsQxkbke7nO1NX1N_hKgS1X07HpZJqyuN6UG34pxURFpZRDVMSE02UkI0NzVWSDRUREw3UDczQy4u";
+
+},
+
+
+function(err){
+
+document.getElementById("result").innerHTML =
+"失敗<br>コード：" + err.code +
+"<br>内容：" + err.message;
+
+}
+
+);
+
+}
+
+</script>
+
+</body>
+</html>
